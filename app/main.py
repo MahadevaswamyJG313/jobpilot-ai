@@ -1,14 +1,16 @@
 from fastapi import FastAPI
 
+from app.core.settings import settings
+
 app = FastAPI(
-    title="JobPilot AI",
+    title=settings.app_name,
     description="AI-powered job discovery, matching, and application assistant.",
-    version="0.1.0",
+    version=settings.app_version,
 )
 
 
 @app.get("/")
 async def root():
     return {
-        "message": "Welcome to JobPilot AI"
+        "message": f"Welcome to {settings.app_name}"
     }
