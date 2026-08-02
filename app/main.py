@@ -1,6 +1,8 @@
-from fastapi import FastAPI
 import logging
 
+from fastapi import FastAPI
+
+from app.api.v1.health import router as health_router
 from app.core.logger import setup_logger
 from app.core.settings import settings
 
@@ -13,6 +15,8 @@ app = FastAPI(
     description="AI-powered job discovery, matching, and application assistant.",
     version=settings.app_version,
 )
+
+app.include_router(health_router)
 
 
 @app.get("/")
