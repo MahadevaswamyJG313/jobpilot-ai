@@ -1,0 +1,92 @@
+Why only this?
+
+Let's understand each line.
+
+[project]
+
+This is the standard metadata defined by modern Python packaging.
+
+name
+name = "jobpilot-ai"
+
+The package/project name.
+
+version
+
+We'll follow Semantic Versioning.
+
+0.1.0
+
+Major.Minor.Patch
+
+Since this is our first MVP:
+
+0.1.0
+description
+
+This becomes useful later if we publish the package or generate documentation.
+
+readme
+
+Tells tools where the project's README lives.
+
+requires-python
+
+I recommend:
+
+>=3.12
+Why?
+
+FastAPI, SQLAlchemy, and modern async features work very well with Python 3.12.
+
+Question: Which Python version are you using?
+
+Run:
+
+python --version
+
+If you're on 3.12 or newer, we'll keep >=3.12. If not, we'll adjust it to match your environment.
+
+dependencies
+
+Empty for now.
+
+We'll let uv populate this automatically.
+
+Instead of editing the file manually, we'll use:
+
+uv add fastapi
+
+and uv will update pyproject.toml for us.
+
+dependency-groups
+
+Development tools go here.
+
+Later:
+
+ruff
+
+mypy
+
+pytest
+
+pre-commit
+Another Engineering Concept
+Source of Truth
+
+From now on:
+
+Never manually add dependencies to pyproject.toml.
+
+Always use:
+
+uv add package-name
+
+or
+
+uv add --dev package-name
+
+Why?
+
+Because the package manager resolves versions and updates everything consistently.
