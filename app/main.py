@@ -3,6 +3,7 @@ import logging
 from fastapi import FastAPI
 
 from app.api.v1.health import router as health_router
+from app.core.lifespan import lifespan
 from app.core.logger import setup_logger
 from app.core.settings import settings
 
@@ -14,6 +15,7 @@ app = FastAPI(
     title=settings.app_name,
     description="AI-powered job discovery, matching, and application assistant.",
     version=settings.app_version,
+    lifespan=lifespan,
 )
 
 app.include_router(health_router)
