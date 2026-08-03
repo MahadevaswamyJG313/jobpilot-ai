@@ -7,6 +7,7 @@ class Settings(BaseSettings):
     app_env: str = "development"
     debug: bool = True
     log_level: str = "INFO"
+    database_url: str
 
     model_config = SettingsConfigDict(
         env_file=".env",
