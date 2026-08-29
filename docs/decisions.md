@@ -1,0 +1,24 @@
+2026-08-03
+
+Repository Pattern
+Status: Accepted
+
+Reason:
+Separate business logic
+from database access.
+
+## 2026-08-03
+
+### Mapper Pattern
+
+**Status:** Accepted
+
+**Reason:** Separate data transformation from business logic and persistence to keep providers independent and maintainable.
+
+## 2026-08-04
+
+### HTTP Client
+
+**Decision:** Use `httpx`.
+
+**Reason:** Native async support, excellent compatibility with FastAPI, and a clean API for HTTP requests.
