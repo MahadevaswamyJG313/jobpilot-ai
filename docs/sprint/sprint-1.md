@@ -52,3 +52,9 @@ Using a mock provider allows us to validate the application's architecture indep
 - Installed Alembic.
 - Initialized migration environment.
 - Prepared the project for version-controlled database schema changes.
+
+### Progress
+
+- Added `httpx` for asynchronous HTTP requests.
+- Started implementing the first real job provider (RemoteOK).
+- Verified connectivity with an external job source.

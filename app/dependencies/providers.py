@@ -1,5 +1,9 @@
-from app.providers import MockProvider
+from app.providers import RemoteOKProvider, LinkedInProvider, ArbeitnowProvider, MultiJobProvider
 
 
 def get_job_provider():
-    return MockProvider()
+    return MultiJobProvider([
+        RemoteOKProvider(),
+        LinkedInProvider(),
+        ArbeitnowProvider(),
+    ])

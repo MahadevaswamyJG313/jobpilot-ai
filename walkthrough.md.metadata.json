@@ -1,0 +1,5 @@
+{
+  "artifactType": "ARTIFACT_TYPE_WALKTHROUGH",
+  "summary": "Walkthrough documenting JobPilot AI vision alignment, codebase architecture verification, and the execution roadmap for Phase 2 / Phase 3. Defines the exact trace of the pipeline and the concrete steps needed to make the RemoteOK data pipeline work end-to-end.",
+  "updatedAt": "2026-08-28T13:59:59.397317600Z"
+}

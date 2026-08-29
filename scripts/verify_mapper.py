@@ -2,7 +2,7 @@ import logging
 
 from app.common.enums import JobSource
 from app.core.logger import setup_logger
-from app.mappers import JobMapper
+from app.mappers.jobMapper import JobMapper
 from app.providers import ProviderJob
 
 setup_logger()

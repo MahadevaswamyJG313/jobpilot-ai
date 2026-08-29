@@ -1,3 +1,4 @@
-from app.repositories.job_repository import JobRepository
+from app.repositories.jobRepository import JobRepository
+from app.repositories.applicationRepository import ApplicationRepository
 
-__all__ = ["JobRepository"]
+__all__ = ["JobRepository", "ApplicationRepository"]

@@ -1,4 +1,4 @@
-from app.models import Job
+from app.models.jobModel import Job
 from app.providers.models import ProviderJob
 
 
